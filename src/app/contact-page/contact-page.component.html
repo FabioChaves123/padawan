@@ -1,0 +1,23 @@
+<h1>Contact Page</h1>
+
+<p> {{descricao}} </p>
+<br>
+
+<p>Digite um e-mail:</p>
+<div class="input-group mb-3">
+    <input type="text" [(ngModel)]="nomeDigitado" class="form-control" placeholder="nickname" arial-label="nickname">
+    <div class="input-group-append">
+      <span class="input-group-text" id="basic-addon2" value="">@exemplo.com</span>
+    </div>
+
+</div>
+
+<p *ngIf="nomeDigitado"> {{ nomeDigitado }}@exemplo.com</p>
+<button type="button"class="btn btn-primary btn-lg margin" (click)="updateContactList()">Adicionar e-mail</button>
+
+<div class="col margin" *ngIf="contactList.length">
+  <p>Lista de contatos</p>
+  <ol class="list-group-list-group-numbered">
+    <li class="list-group-item" *ngFor="let contact of contacList">{{ contact }}</li>
+  </ol>
+</div>

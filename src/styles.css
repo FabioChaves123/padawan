@@ -1,1 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+.row {
+  justify-content: center;
+}
+
+body {
+  background-color: aliceblue;
+}
