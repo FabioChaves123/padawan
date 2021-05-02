@@ -6,4 +6,17 @@ import { Injectable } from '@angular/core';
 export class CalculadoraService {
 
   constructor() { }
+
+  public soma (valor, valor2) {
+    return valor + valor2;
+  };
+  public sub (valor, valor2) {
+    return valor - valor2;
+  };
+  public multi (valor, valor2) {
+    return valor * valor2;
+  };
+  public div (valor, valor2) {
+    return valor / valor2;
+  };
 }

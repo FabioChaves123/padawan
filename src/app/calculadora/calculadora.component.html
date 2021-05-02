@@ -1,4 +1,28 @@
-<h1>Calculadora do Fábio</h1>
+<div>
+    
+    <h2> {{titulo}}</h2>
+    <p> {{description}}</p>
 
-<p>Mais rápido do que o seu pensamento</p>
+</div>
+
+<div class="calculatorBody -m -auto p-10 n-10 text-center">
+    <h2 class="nt-5 nb-2">Calculadora</h2>
+    <div class = "card-body">
+        <div class="row n-3 input_value">
+            <input type="text"
+                [(ngModel)]="firstValue"
+                class="form-control field"
+                placeholder="Primeiro número"
+                required>
+            <input type="text"
+                [(ngModel)]="secondValue"
+                class="form-control field"
+                placeholder="Segundo número"
+                required>
+        </div>
+
+        <div class="row justify-content-around-m-auto n-10"></div>
+            <button type="button" class="button btn-primary-operator" *ngFor="let operator of operators" (click)="doOperation()">{{operator}}</button>
+    </div>
+</div>
 
